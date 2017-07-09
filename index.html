@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>「ＳＡＫＵＲＡ」 Ｍａｔｈｅｍａｔｉｃａｌ－Ｇａｍｅ－Ｓｙｓｔｅｍ－１</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+  <link rel="stylesheet" type="text/css" href="www/css/index.css">
+</head>
+<body>
+  <div class="background layer-0"></div>
+  <div class="background layer-1"></div>
+  <div class="background layer-2"></div>
+  <div class="background layer-3"></div>
+  <div class="background layer-4"></div>
+
+  <div class="case">
+    <div class="bevel">
+      <h1 class="title">Sakura<span class="version">MGS-1</span><img class="logo" src="www/img/maraschino.png"/></h1>
+      <div class="screen">
+        <p id="screen-mathgame-main"></p>
+        <p id="screen-mathgame-level"></p>
+        <p id="screen-mathgame-mode"></p>
+        <p id="screen-mathgame-score"></p>
+      </div>
+    </div>
+
+    <div class="keypad">
+      <div class="column">
+        <button class="button dark"></button>
+        <button class="button" id="button-7">
+          <span class="button-bigtext">7</span>
+        </button>
+        <button class="button" id="button-4">
+          <span class="button-bigtext">4</span>
+        </button>
+        <button class="button" id="button-1">
+          <span class="button-bigtext">1</span>
+        </button>
+        <button class="button" id="button-0">
+          <span class="button-bigtext">0</span>
+        </button>
+      </div>
+
+      <div class="column">
+        <button class="button dark"></button>
+        <button class="button" id="button-8">
+          <span class="button-bigtext">8</span>
+        </button>
+        <button class="button" id="button-5">
+          <span class="button-bigtext">5</span>
+        </button>
+        <button class="button" id="button-2">
+          <span class="button-bigtext">2</span>
+        </button>
+        <button class="button" id="button-point">
+          <span class="button-bigtext">.</span>
+        </button>
+      </div>
+
+      <div class="column">
+        <button class="button dark"></button>
+        <button class="button" id="button-9">
+          <span class="button-bigtext">9</span>
+        </button>
+        <button class="button" id="button-6">
+          <span class="button-bigtext">6</span>
+        </button>
+        <button class="button" id="button-3">
+          <span class="button-bigtext">3</span>
+        </button>
+        <button class="button" id="button-minus">
+          <span class="button-bigtext">-</span>
+        </button>
+      </div>
+
+      <div class="column">
+        <button class="button dark"></button>
+        <button class="button red" id="button-division">
+          <span class="button-bigtext">÷</span>
+        </button>
+        <button class="button red" id="button-multiplication">
+          <span class="button-bigtext">×</span>
+        </button>
+        <button class="button red" id="button-subtraction">
+          <span class="button-bigtext">-</span>
+        </button>
+        <button class="button red" id="button-addition">
+          <span class="button-bigtext">+</span>
+        </button>
+      </div>
+
+      <div class="column">
+        <button class="button" id="button-undo">
+          <span class="button-bigtext">←</span>
+        </button>
+        <button class="button red" id="button-all">
+          <span class="button-smalltext">All</span>
+        </button>
+        <button class="button red" id="button-level">
+          <span class="button-smalltext">Lvl</span>
+        </button>
+        <button class="button check" id="button-check">
+          <span class="button-smalltext">Chk</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+  <!--<script type="text/javascript" src="cordova.js"></script>-->
+  <script type="text/javascript" src="www/js/jquery.min.js"></script>
+  <script type="text/javascript" src="www/js/index.js"></script>
+</body>
+</html>
