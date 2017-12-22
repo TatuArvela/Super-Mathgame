@@ -40,29 +40,6 @@ body {
   .background.layer-1 {
     z-index: 1;
     background: url("../img/speckles.png"); }
-  .background.layer-2 {
-    z-index: 2;
-    position: absolute;
-    margin: auto;
-    left: 50%;
-    bottom: 35%;
-    width: 30em;
-    height: 30em;
-    z-index: 2;
-    background-image: url("../img/sun.png");
-    background-size: 100% 100%; }
-  .background.layer-3 {
-    background-image: url("../img/palm-trees.png");
-    background-size: 35em;
-    background-repeat: no-repeat;
-    background-position: calc(0% + 5em) calc(100% + 3em);
-    z-index: 4; }
-  .background.layer-4 {
-    background-image: url("../img/grid.png");
-    background-size: 100% 10em;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    z-index: 3; }
 
 .case {
   z-index: 1000;

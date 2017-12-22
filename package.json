@@ -2,7 +2,7 @@
     "name": "sakura",
     "displayName": "「ＳＡＫＵＲＡ」　Ｍａｔｈｅｍａｔｉｃａｌ－Ｇａｍｅ－Ｓｙｓｔｅｍ－１",
     "version": "1.0.0",
-    "description":　"Ｖｅｒｙ　ｗｅｌｌ　ｅｘｃｉｔｅｄ　ｇａｍｅ　ｏｆ　ｓｍａｒｔ　ｐｅｏｐｌｅｓ！",
+    "description": "Ｖｅｒｙ　ｗｅｌｌ　ｅｘｃｉｔｅｄ　ｇａｍｅ　ｏｆ　ｓｍａｒｔ　ｐｅｏｐｌｅｓ！",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"

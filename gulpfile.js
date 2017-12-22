@@ -1,18 +1,8 @@
 var gulp      = require('gulp');
-var cordova   = require('cordova-lib').cordova;
 var sass      = require('gulp-sass');
 var ts        = require('gulp-typescript');
 
 gulp.task('default', ['ts', 'sass', 'jquery']);
-
-gulp.task('build', function (callback) {
-  cordova.build({
-    'platforms': ['android'],
-    'options': {
-      argv: ['--release','--gradleArg=--no-daemon']
-    }
-  }, callback);
-});
 
 gulp.task('sass', function() {
   gulp.src('./src/sass/index.sass')
