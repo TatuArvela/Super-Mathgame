@@ -1,12 +1,4 @@
 @font-face {
-  font-family: "Playfair Display";
-  src: url("./PlayfairDisplay-Regular.ttf?"); }
-
-@font-face {
-  font-family: "Montserrat Bold";
-  src: url("./Montserrat-Bold.ttf?"); }
-
-@font-face {
   font-family: "PressStart2P";
   src: url("./PressStart2P.ttf?"); }
 
@@ -25,7 +17,8 @@ body {
   margin: 0em;
   background-size: 100vw 100vh;
   user-select: none;
-  cursor: default; }
+  cursor: default;
+  filter: blur(0.2px); }
 
 .background {
   position: fixed;
@@ -36,10 +29,38 @@ body {
   pointer-events: none; }
   .background.layer-0 {
     z-index: 0;
-    background: linear-gradient(180deg, #542692 0%, #1a0028 100%); }
+    background: linear-gradient(to bottom, #0c1f49 0%, #0165aa 57.9%, #261a40 58.1%, #190d33 100%); }
   .background.layer-1 {
     z-index: 1;
-    background: url("../img/speckles.png"); }
+    background: url("../img/stars.png"); }
+  .background.layer-2 {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vh;
+    height: 100%;
+    background-image: url("../img/sun.png");
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    object-fit: contain; }
+  .background.layer-3 {
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/grid.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    object-fit: contain; }
 
 .case {
   z-index: 1000;
@@ -54,8 +75,8 @@ body {
   border-style: solid;
   border-top-color: #b2ae90;
   border-left-color: #b2ae90;
-  border-bottom-color: #f1f0ea;
-  border-right-color: #f1f0ea;
+  border-bottom-color: white;
+  border-right-color: white;
   border-width: 0.25em;
   border-radius: 2.25em;
   font-size: 1.3vh;
@@ -71,19 +92,18 @@ body {
   line-height: 1em;
   font-size: 0.8em;
   color: white;
-  font-family: 'Playfair Display';
-  text-transform: uppercase;
+  font-family: 'PressStart2P';
   text-shadow: 0em 0em 0.05em black; }
-  .title::first-letter {
-    font-size: 1.2em; }
 
 .version {
-  margin-left: .5em;
-  line-height: 1em;
-  color: #3ddbe7;
-  font-size: 1em;
-  font-family: 'Montserrat Bold';
-  text-shadow: 0em 0em 0.01em #3ddbe7; }
+  position: relative;
+  top: -0.05em;
+  left: 0.6em;
+  line-height: 0.8em;
+  color: #6ae4ed;
+  font-size: 0.8em;
+  font-family: 'PressStart2P';
+  text-shadow: 0em 0em 0.01em #6ae4ed; }
 
 .logo {
   position: absolute;
@@ -99,12 +119,12 @@ body {
   background-size: 0.25em 0.25em;
   border-width: 0.125em;
   border-style: solid;
-  border-top-color: #494946;
-  border-left-color: #494946;
-  border-bottom-color: #494946;
-  border-right-color: #494946;
+  border-top-color: #63635f;
+  border-left-color: #63635f;
+  border-bottom-color: #63635f;
+  border-right-color: #63635f;
   border-radius: 0.625em;
-  box-shadow: 0.025em 0.025em 0.25em black inset, -0.025em -0.025em 0.25em white inset;
+  box-shadow: 0.012em 0.012em 0.12em black inset, -0.012em -0.012em 0.12em white inset;
   width: 19em;
   font-size: 2em; }
 
@@ -116,12 +136,12 @@ body {
   padding: 0.5em;
   margin: 0.4em 1.2em 1.2em 1.2em;
   color: #0c1210;
-  background: linear-gradient(0deg, #2b4038 0%, #3f5f53 70%);
-  border-width: 0.2em;
+  background: linear-gradient(0deg, #2b4038 0%, #3f5f53 90%);
+  border-width: 0.3em;
   border-style: solid;
-  border-color: #494946;
-  border-radius: 0.05em;
-  box-shadow: inset 0em 0em 0.7em black, 0 0 0 0.2em #151514, 0 0 0 0.4em #262625;
+  border-color: #63635f;
+  border-radius: 0.2em;
+  box-shadow: inset 0em 0em 0.3em black, 0 0 0 0.2em #151514, 0 0 0 0.4em #262625;
   text-shadow: 0.125em 0.125em #293d35;
   font-family: 'PressStart2P';
   overflow: hidden; }
@@ -187,9 +207,8 @@ body {
   border-bottom-width: 0.16em;
   border-right-width: 0.16em;
   border-style: solid;
-  border-radius: 0.2em;
   font-size: 1em;
-  font-family: 'Montserrat Bold' !important;
+  font-family: 'PressStart2P' !important;
   outline: none;
   position: relative;
   text-transform: uppercase;
@@ -200,6 +219,10 @@ body {
     top: 0.07em;
     left: 0.07em;
     box-shadow: 0.025em 0.025em 0em 0.01em #010101, 0em 0em 0.2em 0.01em #010101; }
+  .button:focus {
+    outline: none; }
+  .button::-moz-focus-inner {
+    border: 0; }
   .button:before {
     content: "";
     margin-left: -100%; }
