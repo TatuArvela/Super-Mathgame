@@ -11,10 +11,10 @@
     "license": "MIT",
     "private": true,
     "devDependencies": {
+        "@types/jquery": "^3.3.4",
         "gulp": "^3.9.1",
         "gulp-sass": "^4.0.1",
         "gulp-typescript": "^5.0.0-alpha.2",
-        "@types/jquery": "^3.3.4",
         "typescript": "^2.9.2"
     }
 }

@@ -3,7 +3,9 @@
   src: url("./PressStart2P.ttf?"); }
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  user-select: none;
+  -moz-user-select: none; }
 
 body {
   display: flex;
@@ -16,7 +18,6 @@ body {
   right: 0em;
   margin: 0em;
   background-size: 100vw 100vh;
-  user-select: none;
   cursor: default;
   filter: blur(0.2px); }
 
@@ -32,19 +33,19 @@ body {
     background: linear-gradient(to bottom, #0c1f49 0%, #0165aa 57.9%, #261a40 58.1%, #190d33 100%); }
   .background.layer-1 {
     z-index: 1;
-    background: url("../img/stars.png"); }
+    background: url("../img/stars.png");
+    background-attachment: fixed; }
   .background.layer-2 {
     z-index: 2;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100vh;
-    height: 100%;
+    width: 800px;
+    height: 800px;
     background-image: url("../img/sun.png");
-    background-size: 90% 90%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position: center;
     object-fit: contain; }
   .background.layer-3 {
@@ -53,20 +54,18 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
     height: 100%;
+    width: 100%;
+    min-width: 1920px;
     background-image: url("../img/grid.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position: bottom;
     object-fit: contain; }
 
 .case {
   z-index: 1000;
   width: 40em;
-  max-width: 100%;
-  max-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -79,12 +78,8 @@ body {
   border-right-color: white;
   border-width: 0.25em;
   border-radius: 2.25em;
-  font-size: 1.3vh;
+  font-size: 10px;
   box-shadow: -0.05em 0.05em 0em 0.25em rgba(21, 159, 169, 0.5), 0.05em -0.05em 0em 0.25em rgba(212, 24, 114, 0.5); }
-
-@media screen and (max-width: 470px) {
-  .case {
-    font-size: 2.5vw; } }
 
 .title {
   position: relative;
@@ -145,34 +140,39 @@ body {
   text-shadow: 0.125em 0.125em #293d35;
   font-family: 'PressStart2P';
   overflow: hidden; }
-  .screen #screen-mathgame-main {
-    position: absolute;
-    top: 1em;
-    left: 0.6em;
-    margin: 0em;
-    line-height: 0.95em;
-    font-size: 0.95em;
-    white-space: nowrap; }
-  .screen #screen-mathgame-level,
-  .screen #screen-mathgame-mode,
-  .screen #screen-mathgame-score {
-    position: absolute;
-    font-size: 0.55em; }
-  .screen #screen-mathgame-level {
-    left: 1em;
-    bottom: 0em;
-    margin: 0.5em;
-    text-transform: uppercase; }
-  .screen #screen-mathgame-mode {
-    text-align: center;
-    left: 0em;
-    right: 0em;
-    bottom: 0.5em;
-    margin: 0em; }
-  .screen #screen-mathgame-score {
-    right: 1em;
-    bottom: 0.5em;
-    margin: 0em; }
+
+#screen-mathgame-main {
+  position: absolute;
+  top: 1em;
+  left: 0.6em;
+  margin: 0em;
+  line-height: 0.95em;
+  font-size: 0.95em;
+  white-space: nowrap; }
+
+#screen-mathgame-level,
+#screen-mathgame-mode,
+#screen-mathgame-score {
+  position: absolute;
+  font-size: 0.55em; }
+
+#screen-mathgame-level {
+  left: 1em;
+  bottom: 0em;
+  margin: 0.5em;
+  text-transform: uppercase; }
+
+#screen-mathgame-mode {
+  text-align: center;
+  left: 0em;
+  right: 0em;
+  bottom: 0.5em;
+  margin: 0em; }
+
+#screen-mathgame-score {
+  right: 1em;
+  bottom: 0.5em;
+  margin: 0em; }
 
 .keypad {
   padding: 0.85em 0.6em 0.5em 0.6em;
