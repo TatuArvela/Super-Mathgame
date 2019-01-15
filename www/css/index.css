@@ -78,25 +78,25 @@ body {
   border-right-color: white;
   border-width: 0.25em;
   border-radius: 2.25em;
-  font-size: 10px;
+  font-size: 8px;
   box-shadow: -0.05em 0.05em 0em 0.25em rgba(21, 159, 169, 0.5), 0.05em -0.05em 0em 0.25em rgba(212, 24, 114, 0.5); }
 
 .title {
   position: relative;
   margin: 0.4em 0em 0em 1em;
   line-height: 1em;
-  font-size: 0.8em;
+  font-size: 1em;
+  font-weight: normal;
   color: white;
   font-family: 'PressStart2P';
   text-shadow: 0em 0em 0.05em black; }
 
 .version {
   position: relative;
-  top: -0.05em;
-  left: 0.6em;
-  line-height: 0.8em;
+  left: 0.5em;
+  line-height: 1em;
   color: #6ae4ed;
-  font-size: 0.8em;
+  font-size: 1em;
   font-family: 'PressStart2P';
   text-shadow: 0em 0em 0.01em #6ae4ed; }
 
@@ -146,15 +146,15 @@ body {
   top: 1em;
   left: 0.6em;
   margin: 0em;
-  line-height: 0.95em;
-  font-size: 0.95em;
+  line-height: 1em;
+  font-size: 1em;
   white-space: nowrap; }
 
 #screen-mathgame-level,
 #screen-mathgame-mode,
 #screen-mathgame-score {
   position: absolute;
-  font-size: 0.55em; }
+  font-size: 0.5em; }
 
 #screen-mathgame-level {
   left: 1em;
@@ -204,8 +204,8 @@ body {
   border-right-color: #3e3c3c;
   border-top-width: 0.08em;
   border-left-width: 0.08em;
-  border-bottom-width: 0.16em;
-  border-right-width: 0.16em;
+  border-bottom-width: 0.2em;
+  border-right-width: 0.2em;
   border-style: solid;
   font-size: 1em;
   font-family: 'PressStart2P' !important;
@@ -232,9 +232,9 @@ body {
 
 .button-bigtext {
   position: absolute;
-  bottom: -0.1em;
+  bottom: 0;
   left: 0.3em;
-  font-size: 0.9em; }
+  font-size: 1em; }
 
 .button-smalltext {
   position: absolute;

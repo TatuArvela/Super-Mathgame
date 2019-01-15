@@ -148,7 +148,7 @@ body {
   border-right-color: light1($case);
   border-width: 0.25em;
   border-radius: 2.25em;
-  font-size: 10px;
+  font-size: 8px;
   box-shadow: -0.05em 0.05em 0em 0.25em rgba($blue, 0.5), 0.05em -0.05em 0em 0.25em rgba(#D41872, 0.5);
 }
 
@@ -156,7 +156,8 @@ body {
   position: relative;
   margin: 0.4em 0em 0em 1em;
   line-height: 1em;
-  font-size: 0.8em;
+  font-size: 1em;
+  font-weight: normal;
   color: $white;
   font-family: 'PressStart2P';
   text-shadow: 0em 0em 0.05em $black;
@@ -164,11 +165,10 @@ body {
 
 .version {
   position: relative;
-  top: -0.05em;
-  left: 0.6em;
-  line-height: 0.8em;
+  left: 0.5em;
+  line-height: 1em;
   color: $version;
-  font-size: 0.8em;
+  font-size: 1em;
   font-family: 'PressStart2P';
   text-shadow: 0em 0em 0.01em $version;
 }
@@ -222,8 +222,8 @@ body {
     top: 1em;
     left: 0.6em;
     margin: 0em;
-    line-height: 0.95em;
-    font-size: 0.95em;
+    line-height: 1em;
+    font-size: 1em;
     white-space: nowrap;
   }
 
@@ -231,7 +231,7 @@ body {
   #screen-mathgame-mode,
   #screen-mathgame-score {
     position: absolute;
-    font-size: 0.55em;
+    font-size: 0.5em;
   }
 
   #screen-mathgame-level {
@@ -289,8 +289,8 @@ body {
   border-right-color: shadow1($light);
   border-top-width: 0.08em;
   border-left-width: 0.08em;
-  border-bottom-width: 0.16em;
-  border-right-width: 0.16em;
+  border-bottom-width: 0.2em;
+  border-right-width: 0.2em;
   border-style: solid;
   font-size: 1em;
   font-family: 'PressStart2P' !important;
@@ -323,9 +323,9 @@ body {
 
 .button-bigtext {
   position: absolute;
-  bottom: -0.1em;
+  bottom: 0;
   left: 0.3em;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 .button-smalltext {
