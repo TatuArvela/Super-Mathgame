@@ -71,22 +71,21 @@ body {
   align-items: center;
   justify-content: center;
   position: fixed;
-  top: 0em;
-  bottom: 0em;
-  left: 0em;
-  right: 0em;
-  margin: 0em;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
   background-size: 100vw 100vh;
   cursor: default;
-  filter: blur(0.2px);
 }
 
 .background {
   position: fixed;
-  top: 0em;
-  right: 0em;
-  bottom: 0em;
-  left: 0em;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   pointer-events: none;
   &.layer-0 {
     z-index: 0;
@@ -94,8 +93,7 @@ body {
   }
   &.layer-1 {
     z-index: 1;
-    background: url("../img/stars.png");
-    background-attachment: fixed;
+    background: url("../img/stars.png") fixed;
   }
   &.layer-2 {
     z-index: 2;
@@ -149,18 +147,18 @@ body {
   border-width: 0.25em;
   border-radius: 2.25em;
   font-size: 8px;
-  box-shadow: -0.05em 0.05em 0em 0.25em rgba($blue, 0.5), 0.05em -0.05em 0em 0.25em rgba(#D41872, 0.5);
+  box-shadow: -0.05em 0.05em 0 0.25em rgba($blue, 0.5), 0.05em -0.05em 0 0.25em rgba(#D41872, 0.5);
 }
 
 .title {
   position: relative;
-  margin: 0.4em 0em 0em 1em;
+  margin: 0.4em 0 0 1em;
   line-height: 1em;
   font-size: 1em;
   font-weight: normal;
   color: $white;
-  font-family: 'PressStart2P';
-  text-shadow: 0em 0em 0.05em $black;
+  font-family: 'PressStart2P', sans-serif;
+  text-shadow: 0 0 0.05em $black;
 }
 
 .version {
@@ -169,8 +167,8 @@ body {
   line-height: 1em;
   color: $version;
   font-size: 1em;
-  font-family: 'PressStart2P';
-  text-shadow: 0em 0em 0.01em $version;
+  font-family: 'PressStart2P', sans-serif;
+  text-shadow: 0 0 0.01em $version;
 }
 
 .logo {
@@ -211,9 +209,9 @@ body {
   border-style: solid;
   border-color: light1($bevel);
   border-radius: 0.2em;
-  box-shadow: inset 0em 0em 0.3em $shadow, 0 0 0 0.2em $bevel, 0 0 0 0.4em $bevel2;
+  box-shadow: inset 0 0 0.3em $shadow, 0 0 0 0.2em $bevel, 0 0 0 0.4em $bevel2;
   text-shadow: 0.125em 0.125em shadow2($screen);
-  font-family: 'PressStart2P';
+  font-family: 'PressStart2P', sans-serif;
   overflow: hidden;
 }
 
@@ -221,7 +219,7 @@ body {
     position: absolute;
     top: 1em;
     left: 0.6em;
-    margin: 0em;
+    margin: 0;
     line-height: 1em;
     font-size: 1em;
     white-space: nowrap;
@@ -236,23 +234,23 @@ body {
 
   #screen-mathgame-level {
     left: 1em;
-    bottom: 0em;
+    bottom: 0;
     margin: 0.5em;
     text-transform: uppercase;
   }
 
   #screen-mathgame-mode {
     text-align: center;
-    left: 0em;
-    right: 0em;
+    left: 0;
+    right: 0;
     bottom: 0.5em;
-    margin: 0em;
+    margin: 0;
   }
 
   #screen-mathgame-score {
     right: 1em;
     bottom: 0.5em;
-    margin: 0em;
+    margin: 0;
   }
 
 .keypad {
@@ -293,17 +291,17 @@ body {
   border-right-width: 0.2em;
   border-style: solid;
   font-size: 1em;
-  font-family: 'PressStart2P' !important;
+  font-family: 'PressStart2P', sans-serif !important;
   outline: none;
   position: relative;
   text-transform: uppercase;
-  text-shadow: 0em 0em 0.05em $black;
-  box-shadow: 0.1em 0.1em 0em 0.01em $button-shadow, 0em 0em 0.2em 0.01em $button-shadow;
+  text-shadow: 0 0 0.05em $black;
+  box-shadow: 0.1em 0.1em 0 0.01em $button-shadow, 0 0 0.2em 0.01em $button-shadow;
   &:active {
     position: relative;
     top: 0.07em;
     left: 0.07em;
-    box-shadow: 0.025em 0.025em 0em 0.01em $button-shadow, 0em 0em 0.2em 0.01em $button-shadow;
+    box-shadow: 0.025em 0.025em 0 0.01em $button-shadow, 0 0 0.2em 0.01em $button-shadow;
   }
   &:focus {
     outline: none;
@@ -349,7 +347,7 @@ body {
   border-left-color: light2($yellow);
   border-bottom-color: shadow1($yellow);
   border-right-color: shadow1($yellow);
-  text-shadow: 0em 0em 0.125em $black;
+  text-shadow: 0 0 0.125em $black;
 }
 
 .dark {

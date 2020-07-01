@@ -165,15 +165,10 @@ function check() {
 
 
 function screenHasSpaceForContent(content: string) {
-  var problem: string = num01 + op + num02 + '=';
-  var screenContent: string = problem + content;
+  const problem: string = num01 + op + num02 + '=';
+  const screenContent: string = problem + content;
 
-  if (screenContent.length > screenWidth) {
-    return false;
-  }
-  else {
-    return true;
-  }
+  return screenContent.length <= screenWidth;
 }
 
 function enterNumber(number: string) {
@@ -362,7 +357,7 @@ function display(target: string, method: string, input: string, keepScrolling?: 
     clearInterval(screenScroll);
   }
 
-  var element;
+  let element;
   switch(target) {
     case 'main':
       element = document.getElementById( 'screen-mathgame-main' );
@@ -380,7 +375,7 @@ function display(target: string, method: string, input: string, keepScrolling?: 
       return false;
   }
   
-  var output = '';
+  let output = '';
   switch(method) {
       case 'add':
         output = element.innerHTML + input;
@@ -392,7 +387,7 @@ function display(target: string, method: string, input: string, keepScrolling?: 
         break;
       case 'startscroll':
         drawScore();
-        var padding = Array(screenWidth + 1).join('\xa0');
+        const padding = Array(screenWidth + 1).join('\xa0');
         input = (input + padding).substring(0, padding.length);
         screenScroll = setInterval(function () {
           input = input[input.length - 1] + input.substring(0, input.length - 1);
