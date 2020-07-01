@@ -5,7 +5,7 @@
     "description": "ａｅｓｔｈｅｔｉｃ　ａｎｄ　ｍｏｄｅｒｎ　ｍｅｎｔａｌ　ｃａｌｃｕｌａｔｉｏｎ　ｇａｍｅ　ｅｎｔｅｒｔａｉｎｍｅｎｔ　ｓｙｓｔｅｍ",
     "main": "index.js",
     "scripts": {
-        "build": "rm -rf docs && parcel build src/index.html --out-dir docs --no-content-hash",
+        "build": "rm -rf docs && parcel build src/index.html --out-dir docs --no-content-hash --public-url /Super-Mathgame/",
         "start": "parcel serve src/index.html"
     },
     "author": "Tatu Arvela",
