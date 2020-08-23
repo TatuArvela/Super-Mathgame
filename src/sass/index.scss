@@ -1,11 +1,18 @@
+html {
+  height: 100%;
+}
+
 body {
-  background-size: 100vw 100vh;
   display: grid;
-  height: 100vh;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   margin: 0;
   overflow: hidden;
   place-items: center center;
-  width: 100vw;
+  width: 100%;
+  min-height: 100%;
 
   > * {
     box-sizing: border-box;
@@ -13,7 +20,7 @@ body {
   }
 }
 
-@import 'background';
-@import 'case';
-@import 'keypad';
-@import 'screen';
+@import "background";
+@import "case";
+@import "keypad";
+@import "screen";

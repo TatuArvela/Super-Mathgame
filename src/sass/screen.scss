@@ -1,19 +1,20 @@
-@import 'variables';
+@import "variables";
 
 .bevel {
   margin: auto;
-  background: $bevel linear-gradient(to bottom, $bevel 0%, $bevel 50%, $bevel2 75%, $bevel 100%);
+  background: $bevel
+    linear-gradient(to bottom, $bevel 0%, $bevel 50%, $bevel2 75%, $bevel 100%);
   background-size: 0.25em 0.25em;
   border: 0.1em solid light1($bevel);
   border-radius: 0.625em;
-  box-shadow: 0 0 0.1em $white inset;
+  box-shadow: 0 0 0.1em white inset;
   width: 20em;
   font-size: 2em;
 }
 
 .title {
-  color: $white;
-  font-family: 'Lora', sans-serif;
+  color: white;
+  font-family: "Lora", sans-serif;
   font-size: 1rem;
   font-weight: normal;
   line-height: 1em;
@@ -37,7 +38,7 @@
   color: shadow3($screen);
   display: block;
   flex-direction: row;
-  font-family: 'Press Start 2P', sans-serif;
+  font-family: "Press Start 2P", sans-serif;
   height: 2.5em;
   margin: 0.75em 1.2em 1.2em;
   overflow: hidden;

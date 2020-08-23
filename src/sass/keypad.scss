@@ -1,4 +1,4 @@
-@import 'variables';
+@import "variables";
 
 .keypad {
   padding: 0.85em 0.6em 0.5em 0.6em;
@@ -28,9 +28,9 @@
   border-right: 0.2em solid shadow1($light);
   border-top: 0.1em solid light2($light);
   border-radius: 0.125em;
-  box-shadow: 0 0 .1em .1em rgba(0,0,0,0.75);
-  color: black;
-  font-family: 'IBM Plex Serif', sans-serif !important;
+  box-shadow: 0 0 0.1em 0.1em rgba(0, 0, 0, 0.75);
+  color: white;
+  font-family: "Maven Pro", sans-serif !important;
   font-size: 1em;
   font-weight: bold;
   outline: none;
@@ -96,14 +96,26 @@
   top: 1em;
 }
 
-$action-buttons: 'undo', 'division', 'all', 'multiplication', 'level', 'subtraction', 'check', 'point', 'minus', 'addition';
+$action-buttons: "undo", "division", "all", "multiplication", "level",
+  "subtraction", "check", "point", "minus", "addition";
 @each $button in $action-buttons {
   #button-#{$button} {
     grid-area: #{$button};
   }
 }
 
-$number-buttons: ("0": "zero", "1": "one", "2": "two", "3": "three", "4": "four", "5": "five", "6": "six", "7": "seven", "8": "eight", "9": "nine");
+$number-buttons: (
+  "0": "zero",
+  "1": "one",
+  "2": "two",
+  "3": "three",
+  "4": "four",
+  "5": "five",
+  "6": "six",
+  "7": "seven",
+  "8": "eight",
+  "9": "nine",
+);
 @each $number, $area in $number-buttons {
   #button-#{$number} {
     grid-area: #{$area};
