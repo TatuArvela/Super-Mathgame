@@ -24,7 +24,7 @@ let acceptNumbers: boolean;
 // DEFAULTS
 
 mode = '+';
-setLevel('Easy');
+setLevel('EASY');
 
 
 // FUNCTIONS
@@ -91,57 +91,35 @@ function getDecimalPlaces(number: number) {
 
 
 function setLevel(newLevel: String) {
+  score = 0;
   switch(newLevel) {
-    case 'Easy':
-      level = 'Easy';
-      score = 0;
+    case 'EASY':
+      level = 'EASY';
       goal = 10;
       randomMin = 2;
       randomMax = 10;
       maxDecimals = 1;
       break;
-    case 'Medium':
-      level = 'Medium';
-      score = 0;
-      goal = 15;
+    case 'MEDI':
+      level = 'MEDI';
+      goal = 20;
       randomMin = 3;
       randomMax = 12;
       maxDecimals = 1;
       break;
-    case 'Hard':
-      level = 'Hard';
-      score = 0;
-      goal = 20;
+    case 'HARD':
+      level = 'HARD';
+      goal = 30;
       randomMin = 5;
       randomMax = 20;
       maxDecimals = 1;
       break;
-    case 'Very Hard':
-      level = 'Very Hard';
-      score = 0;
-      goal = 25;
+    case 'XTRM':
+      level = 'XTRM';
+      goal = 99;
       randomMin = 10;
       randomMax = 24;
-      maxDecimals = 1;
-      break;
-  }
-  runGame(mode);
-}
-
-
-function switchLevel() {
-  switch(level) {
-    case 'Very Hard':
-      setLevel('Easy');
-      break;
-    case 'Easy':
-      setLevel('Medium');
-      break;
-    case 'Medium':
-      setLevel('Hard');
-      break;
-    case 'Hard':
-      setLevel('Very Hard');
+      maxDecimals = 2;
       break;
   }
   runGame(mode);
@@ -210,7 +188,7 @@ function minus() {
 
 // INPUTS
 
-const buttons = document.querySelectorAll('.button');
+const buttons = document.querySelectorAll('[id^=button]');
 [].forEach.call(buttons, function(button: HTMLElement) {
   button.addEventListener('click', function() {
     switch(button.getAttribute('id')) {
@@ -251,13 +229,10 @@ const buttons = document.querySelectorAll('.button');
       case 'button-9':
         enterNumber('9');
         break;
-      
-      // OPTIONS
+
+      // FUNCTIONS
       case 'button-minus':
         minus();
-        break;
-      case 'button-level':
-        switchLevel();
         break;
       case 'button-check':
         check();
@@ -265,8 +240,26 @@ const buttons = document.querySelectorAll('.button');
       case 'button-undo':
         undo();
         break;
-      
-      // FUNCTIONS
+
+      // LEVELS
+      case 'button-easy':
+        setLevel('EASY');
+        runGame(mode);
+        break;
+      case 'button-medi':
+        setLevel('MEDI');
+        runGame(mode);
+        break;
+      case 'button-hard':
+        setLevel('HARD');
+        runGame(mode);
+        break;
+      case 'button-xtrm':
+        setLevel('XTRM');
+        runGame(mode);
+        break;
+
+      // OPTIONS
       case 'button-division':
         score = 0;
         runGame('÷');

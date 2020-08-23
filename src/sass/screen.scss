@@ -1,0 +1,85 @@
+@import 'variables';
+
+.bevel {
+  margin: auto;
+  background: $bevel linear-gradient(to bottom, $bevel 0%, $bevel 50%, $bevel2 75%, $bevel 100%);
+  background-size: 0.25em 0.25em;
+  border: 0.1em solid light1($bevel);
+  border-radius: 0.625em;
+  box-shadow: 0 0 0.1em $white inset;
+  width: 20em;
+  font-size: 2em;
+}
+
+.title {
+  color: $white;
+  font-family: 'Lora', sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1em;
+  margin: 0.5em 1em;
+  position: relative;
+
+  &__logo {
+    position: absolute;
+    top: -0.2em;
+    right: -0.2em;
+    width: 1.2em;
+    height: 1.2em;
+  }
+}
+
+.screen {
+  background: $screen-gradient;
+  border-radius: 0.2em;
+  border: 0.3em solid light1($bevel);
+  box-shadow: inset 0 0 0.3em $shadow, 0 0 0 0.2em $bevel, 0 0 0 0.4em $bevel2;
+  color: shadow3($screen);
+  display: block;
+  flex-direction: row;
+  font-family: 'Press Start 2P', sans-serif;
+  height: 2.5em;
+  margin: 0.75em 1.2em 1.2em;
+  overflow: hidden;
+  padding: 0.5em;
+  position: relative;
+  text-shadow: 0.125em 0.125em shadow2($screen);
+
+  &__main {
+    font-size: 1em;
+    left: 0.5em;
+    line-height: 1em;
+    margin: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+    white-space: nowrap;
+  }
+
+  &__bottom {
+    bottom: 0.5em;
+    font-size: 1em;
+    line-height: 1em;
+    margin: 0;
+    position: absolute;
+    text-transform: uppercase;
+  }
+
+  &__level {
+    @extend .screen__bottom;
+    left: 0.5em;
+  }
+
+  &__mode {
+    @extend .screen__bottom;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  &__score {
+    @extend .screen__bottom;
+    right: 0.5em;
+  }
+}

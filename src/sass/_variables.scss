@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600&family=Lora&family=Press+Start+2P&display=swap');
+
+@function shadow1($color) {
+  @return darken($color, 10%);
+}
+
+@function shadow2($color) {
+  @return darken($color, 1%);
+}
+
+@function shadow3($color) {
+  @return darken($color, 15%);
+}
+
+@function light1($color) {
+  @return lighten($color, 30%);
+}
+
+@function light2($color) {
+  @return lighten($color, 10%);
+}
+
+@function light3($color) {
+  @return lighten($color, 50%);
+}
+
+@function button-gradient($color) {
+  @return linear-gradient(180deg, $color 0%, $color 0.6em, light2($color) 0.7em, $color 1.2em);
+}
+
+$white: white;
+
+$case: #c7c4ae;
+$case-gradient: linear-gradient(180deg, #4979dd 0%, #f4f2f5 50%, #483b5d 50.1%, #b9bcce 100%);
+
+$bevel: #151514;
+$bevel2: #262625;
+
+$screen: #2b4038;
+$screen-gradient: linear-gradient(0deg, $screen 0%, light2($screen) 90%);
+
+$shadow: black;
+
+$button-text: #fffee7;
+$button-shadow: #010101;
+
+$light: #c2bfb9;
+$black: #2a2424;
+$blue: #3976b3;
+$red: #b33a51;

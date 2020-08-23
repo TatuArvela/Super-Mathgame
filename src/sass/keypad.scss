@@ -1,0 +1,111 @@
+@import 'variables';
+
+.keypad {
+  padding: 0.85em 0.6em 0.5em 0.6em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2em 2em 2em 2em 2em;
+  grid-template-areas:
+    "all level . . ."
+    "addition seven eight nine undo"
+    "subtraction four five six undo"
+    "multiplication one two three check"
+    "division zero point minus check";
+  justify-content: center;
+  gap: 0.8em;
+  font-size: 2em;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  background: button-gradient($light);
+  border-bottom: 0.2em solid shadow1($light);
+  border-left: 0.1em solid light2($light);
+  border-right: 0.2em solid shadow1($light);
+  border-top: 0.1em solid light2($light);
+  border-radius: 0.125em;
+  box-shadow: 0 0 .1em .1em rgba(0,0,0,0.75);
+  color: black;
+  font-family: 'IBM Plex Serif', sans-serif !important;
+  font-size: 1em;
+  font-weight: bold;
+  outline: none;
+  position: relative;
+  text-transform: uppercase;
+
+  &:active {
+    transform: translate(1px, 1px);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  &--red {
+    @extend .button;
+    color: $button-text;
+    background: button-gradient($red);
+    border-bottom-color: shadow1($red);
+    border-left-color: light2($red);
+    border-right-color: shadow1($red);
+    border-top-color: light2($red);
+  }
+
+  &--black {
+    @extend .button;
+    color: $button-text;
+    background: button-gradient($black);
+    border-bottom-color: shadow1($black);
+    border-left-color: light2($black);
+    border-right-color: shadow1($black);
+    border-top-color: light2($black);
+  }
+
+  &--check {
+    @extend .button;
+    color: $button-text;
+    background: button-gradient($blue);
+    border-bottom-color: shadow1($blue);
+    border-left-color: light2($blue);
+    border-right-color: shadow1($blue);
+    border-top-color: light2($blue);
+  }
+}
+
+.button__big-text {
+  display: block;
+  position: absolute;
+  font-size: 1em;
+  left: 0.3em;
+  top: 0.5em;
+}
+
+.button__small-text {
+  display: block;
+  position: absolute;
+  font-size: 0.75em;
+  left: 0.3em;
+  top: 1em;
+}
+
+$action-buttons: 'undo', 'division', 'all', 'multiplication', 'level', 'subtraction', 'check', 'point', 'minus', 'addition';
+@each $button in $action-buttons {
+  #button-#{$button} {
+    grid-area: #{$button};
+  }
+}
+
+$number-buttons: ("0": "zero", "1": "one", "2": "two", "3": "three", "4": "four", "5": "five", "6": "six", "7": "seven", "8": "eight", "9": "nine");
+@each $number, $area in $number-buttons {
+  #button-#{$number} {
+    grid-area: #{$area};
+  }
+}

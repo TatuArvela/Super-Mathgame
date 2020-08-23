@@ -1,111 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>「ＳＵＰＥＲ　ＭＡＴＨＧＡＭＥ™」</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-  <link rel="stylesheet" type="text/css" href="sass/index.scss">
+    <title>「ＳＵＰＥＲ　ＭＡＴＨＧＡＭＥ™」</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="sass/index.scss">
 </head>
 <body>
-  <div class="background layer-0"></div>
-  <div class="background layer-1"></div>
-  <div class="background layer-2"></div>
-  <div class="background layer-3"></div>
+<div class="background__layer-0"></div>
+<div class="background__layer-1"></div>
+<div class="background__layer-2"></div>
+<div class="background__layer-3"></div>
+<div class="background__layer-4"></div>
 
-  <div class="case">
+<div class="case">
     <div class="bevel">
-      <h1 class="title">SUPER<span class="version">MATHGAME™</span><img class="logo" src="img/maraschino.png"/></h1>
-      <div class="screen">
-        <p id="screen-mathgame-main"></p>
-        <p id="screen-mathgame-level"></p>
-        <p id="screen-mathgame-mode"></p>
-        <p id="screen-mathgame-score"></p>
-      </div>
+        <h1 class="title">
+            <span class="title__super">SUPER</span>
+            <span class="title__mathgame">MATHGAME™</span>
+            <img class="title__logo" src="img/maraschino.png" alt=""/>
+        </h1>
+        <div class="screen">
+            <p class="screen__main" id="screen-mathgame-main"></p>
+            <p class="screen__level" id="screen-mathgame-level"></p>
+            <p class="screen__mode" id="screen-mathgame-mode"></p>
+            <p class="screen__score" id="screen-mathgame-score"></p>
+        </div>
     </div>
 
     <div class="keypad">
-      <div class="column">
-        <div class="spacer"></div>
-        <button class="button" id="button-7">
-          <span class="button-bigtext">7</span>
+        <button class="button--red" id="button-addition">
+            <span class="button__big-text">+</span>
         </button>
-        <button class="button" id="button-4">
-          <span class="button-bigtext">4</span>
+        <button class="button--red" id="button-subtraction">
+            <span class="button__big-text">-</span>
         </button>
-        <button class="button" id="button-1">
-          <span class="button-bigtext">1</span>
+        <button class="button--red" id="button-multiplication">
+            <span class="button__big-text">×</span>
         </button>
-        <button class="button" id="button-0">
-          <span class="button-bigtext">0</span>
+        <button class="button--red" id="button-division">
+            <span class="button__big-text">÷</span>
         </button>
-      </div>
+        <button class="button--red" id="button-all">
+            <span class="button__small-text">All</span>
+        </button>
 
-      <div class="column">
-        <div class="spacer"></div>
-        <button class="button" id="button-8">
-          <span class="button-bigtext">8</span>
+        <button class="button" id="button-easy">
+            <span class="button__small-text">Easy</span>
         </button>
-        <button class="button" id="button-5">
-          <span class="button-bigtext">5</span>
+        <button class="button" id="button-medi">
+            <span class="button__small-text">Medi</span>
         </button>
-        <button class="button" id="button-2">
-          <span class="button-bigtext">2</span>
+        <button class="button" id="button-hard">
+            <span class="button__small-text">Hard</span>
         </button>
-        <button class="button" id="button-point">
-          <span class="button-bigtext">.</span>
+        <button class="button" id="button-xtrm">
+            <span class="button__small-text">Xtrm</span>
         </button>
-      </div>
 
-      <div class="column">
-        <div class="spacer"></div>
-        <button class="button" id="button-9">
-          <span class="button-bigtext">9</span>
+        <button class="button--black" id="button-9">
+            <span class="button__big-text">9</span>
         </button>
-        <button class="button" id="button-6">
-          <span class="button-bigtext">6</span>
+        <button class="button--black" id="button-8">
+            <span class="button__big-text">8</span>
         </button>
-        <button class="button" id="button-3">
-          <span class="button-bigtext">3</span>
+        <button class="button--black" id="button-7">
+            <span class="button__big-text">7</span>
         </button>
-        <button class="button" id="button-minus">
-          <span class="button-bigtext">-</span>
+        <button class="button--black" id="button-6">
+            <span class="button__big-text">6</span>
         </button>
-      </div>
+        <button class="button--black" id="button-5">
+            <span class="button__big-text">5</span>
+        </button>
+        <button class="button--black" id="button-4">
+            <span class="button__big-text">4</span>
+        </button>
+        <button class="button--black" id="button-3">
+            <span class="button__big-text">3</span>
+        </button>
+        <button class="button--black" id="button-2">
+            <span class="button__big-text">2</span>
+        </button>
+        <button class="button--black" id="button-1">
+            <span class="button__big-text">1</span>
+        </button>
+        <button class="button--black" id="button-0">
+            <span class="button__big-text">0</span>
+        </button>
 
-      <div class="column">
-        <div class="spacer"></div>
-        <button class="button red" id="button-division">
-          <span class="button-bigtext">÷</span>
+        <button class="button--black" id="button-point">
+            <span class="button__big-text">.</span>
         </button>
-        <button class="button red" id="button-multiplication">
-          <span class="button-bigtext">×</span>
+        <button class="button--black" id="button-minus">
+            <span class="button__big-text">-</span>
         </button>
-        <button class="button red" id="button-subtraction">
-          <span class="button-bigtext">-</span>
-        </button>
-        <button class="button red" id="button-addition">
-          <span class="button-bigtext">+</span>
-        </button>
-      </div>
 
-      <div class="column">
-        <button class="button" id="button-undo">
-          <span class="button-bigtext">←</span>
+        <button class="button--black" id="button-undo">
+            <span class="button__big-text">←</span>
         </button>
-        <button class="button red" id="button-all">
-          <span class="button-smalltext">All</span>
-        </button>
-        <button class="button red" id="button-level">
-          <span class="button-smalltext">Lvl</span>
-        </button>
-        <button class="button check" id="button-check">
-          <span class="button-smalltext">Chk</span>
-        </button>
-      </div>
 
+        <button class="button--check" id="button-check">
+            <span class="button__small-text">✓</span>
+        </button>
     </div>
-  </div>
+</div>
 
-  <script src="ts/index.ts"></script>
+<script src="ts/index.ts"></script>
 </body>
 </html>
