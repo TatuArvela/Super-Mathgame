@@ -73,7 +73,7 @@
     }
     100% {
       transform: perspective(50vh) rotateX(60deg) translateZ(10px)
-        translateY($grid-size);
+        translateY(#{$grid-size * (1 + 1/6)});
     }
   }
 
